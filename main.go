@@ -22,7 +22,7 @@ func main() {
 
 func logRequest(handler http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
-		log.Printf("%s %s %s\n", req.RemoteAddr, req.Method, req.URL)
+		log.Printf("%s %s %s %s\n", req.RemoteAddr, req.Method, req.URL, req.UserAgent())
 		handler.ServeHTTP(w, req)
 	})
 }
