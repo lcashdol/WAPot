@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"lang="en"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"lang="en"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en"class="gt-ie8"><!--<![endif]--><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml"xmlns:v><![endif]--><head> <meta charset="utf-8"/><meta name="viewport"content="width=device-width"/> <title>Welcome to your Belkin router dashboard! </title><link rel="icon"href="/images/favicon.ico"><link rel="apple-touch-icon-precomposed"sizes="144x144"href="/images/belkin_144.png"><link rel="apple-touch-icon-precomposed"sizes="114x114"href="/images/belkin_114.png"><link rel="apple-touch-icon-precomposed"sizes="72x72"href="/images/belkin_72.png"><link rel="apple-touch-icon-precomposed"href="/images/belkin_57.png"> <link rel="stylesheet"href="/app.css"> <!--[if lt IE 9]> <link rel="stylesheet"href="/ie.css"> <![endif]--><!--[if IE]><?import namespace="v"implementation="#default#VML"?><![endif]--><script src="jquery.min.js"></script><script src="app.js"></script></head><script>var access_from=3;var PWS_ssid = "belkin.4b7";
+var PWS_key = "2ae886ec";
+var PWS_type = 4;
+var PWS_encrType = 2;
+var wps_version = 32;
+var ClientIP="192.168.2.3"
+var show_key=PWS_key.replace(/(?!^)./g,'&bull;');var ap_mode=0;var G_ip=G_svrip="192.168.2.1"
+var wf_key=PWS_key+"";</script><script src="menu.js"></script><script src="global.js"></script><script src="main_header.js"></script><script src="routine.js"></script><script src="wlan.js"></script><div class="main container"> <div class="row"><div class="eight columns"><form class="nice"name="tF"method="post"action="/cgi-bin/wireless_ssid.exe"target="OUTfrm"> <input NAME=wmd TYPE=hidden VALUE=0><div class="row"> <div class="twelve columns"><br><br> <p class="drip-ip"> <span id="u_ap_msg">To make changes to the wireless settings of the router, make the changes here. Click "Save" to save the settings. </span> </p><p class="drop-ip"> <table class="minimal normal"> <thead> <tr id="u_dual_band"> <th width="190">&nbsp;</td> <th width="366"><h4><span id="u_wl_band">&nbsp;</span></h4></th></tr> </thead> <tr id="r_wchan"> <td width="190"><nobr> <b><font>Wireless Channel</font></b></nobr> </td> <td id="u_wchan"><select size="1"name="wchan"class="selectList"onchange="channelselectedchange()"> <option value=0>Auto</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6 selected>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option><option value=11>11</option> </select></td> </tr> <tr id="r_extwchan"> <td width="190"><nobr><b><font>Extension Channel</font></b></nobr><p></p></td> <td width="366"id="u_ex_wchan"><select size="1"name="ex_wchan"class="selectList"> <option value=2>2</option><option value=10 selected>10</option></select></td> </tr> <tr> <td width="174"><nobr> <b><font>SSID</font></b></nobr><p></p> </td> <td id="u_ssid"><input type="text"class="input-text small"name="ssid"size=27 maxlength=32></td></tr> <tr> <td width="174"><nobr><b><font>Wireless Mode</font>&gt;</b></nobr><p></p></td> <td id="u_wbr"><select size="1"name="wbr"class="selectList"onchange="wbrselectedchange()"> <option value=11>Off</option><option value=4>802.11g</option><option value=9 selected>802.11b&802.11g&802.11n</option><option value=6>802.11n</option> </select> </td></tr> <tr id="r_bw"> <td width="174"><nobr><b><font>Bandwidth</font>&nbsp;&gt;</b></nobr><p></p></td> <td id="u_bandwidth"><select size="1"name="bandwidth"class="selectList"onchange="bandwidthselectedchange()"><option value="1">20/40MHz</option><option value="0">20MHz</option> </select></td> </tr> <script language="javascript">var isGmode=0;
+var iDOD=1;if(isGmode==1){document.tF.bandwidth.value=0;}else{document.tF.bandwidth.value=iDOD;}</script> <tr> <td width="174"><nobr><b><font>Broadcast SSID</font></b></nobr><p></p></td> <td id="u_ssidbcst"><input type="checkbox"name="hidessid"value="0"onclick="wl_closed_check();"> </td> </tr> <script language="javascript">var iDOD=0;if(!iDOD)
+document.tF.hidessid.checked=true;else
+document.tF.hidessid.checked=false;</script> <tr> <td width="174"><nobr><b><font>Protected Mode</font>&nbsp;&gt;</b></nobr><p></p></td> <td id="u_protectmode"><select size="1"name="protectmode"class="selectList"> <option value="0"selected>Off</option> <option value="1">On</option> </select>&nbsp; </td></tr> <script language="javascript">var iDOD=0;document.tF.protectmode.selectedIndex=iDOD;</script> <tr> <td width="174"><nobr><b><font>802.11e/WMM QoS</font>&nbsp;&gt;</b></nobr><p></p></td> <td id="u_wmmenable"><select size="1"name="wmmenable"class="selectList"> <option value="0">Off</option> <option value="1">On</option> </select>&nbsp; </td></tr> <script language="javascript">var iDOD=0;document.tF.wmmenable.selectedIndex=iDOD;</script> </table> </p></div></div><br><a href="#save"class="nice radius large green button"onClick="return evaltF()"id="dnsapply">Save</a>&nbsp;&nbsp;</form></div><div class="sidebar four columns"> <div><h6>What are the network name and channel settings? </h6> <p><span>The network name is called an SSID (Service Set ID).  All of the clients on your network must know the SSID to join the router's network. </span><span class="nub"></span></p> </div> </div><div class="column-row hide-on-desktops"> <div class="sixteen columns"> <ul class="sub-nav"id="mob_sub_nav"></ul> </div> </div></div> </div><script src="main_footer.js"></script><script>var wireless_oper_mode=1;ssidvalue="SSID can not be set as NULL! ";var wirelessmode=6;var wirelessenable=1;var skuid=1;var ch;var SUPPORTED_CHANNEL_LO=1;
+
+var SUPPORTED_CHANNEL=11;
+
+var isGmode=0;
+var enableOS=0;
+var enableWEP=0;
+var enableSSN=1;
+var enableSSNPSK=1;
+var WEPKEYTYPE=0;
+var wpaflag=1;
+var wireless_mode=9;
+var secu_type=9;
+var NO_ENCRYPTION=0;
+var WEP64BIT=1;
+var WEP128BIT=2;
+var WPAWPA2_RADIUS=3;
+var WPAWPA2_PSK=4;
+function changeMode()
+{if(wireless_oper_mode!=3)
+{if(navigator.appName!="Netscape")
+{if(document.tF.wbr.selectedIndex==4)
+{}
+else
+{if(document.tF.wbr.selectedIndex==2||document.tF.wbr.selectedIndex==3)
+{document.tF.wchan.value=6;if(document.tF.wbr.selectedIndex==3)
+{}
+else
+{}}
+else
+{document.tF.wchan.disabled=false;}}
+return true;}}}
+function SSIDisSpecialChar(s){var i;var c;for(i=0;i<s.length;i++){c=s.charAt(i);if((c=='"')||(c=='\\')||(c=='\'')){ch=c;return true;}}
+return false;}
+function evaltF()
+{var f=document.tF;if(f.ssid.value==''){alert(ssidvalue);return false;}
+if(isNVaidSSIDChar(f.ssid.value)){alert("Your network name can only contain letters, numbers, punctuation, and spaces. ");f.ssid.focus();return false;}
+if(access_from==3)
+{security_type=secu_type;if(f.ssid.value!=PWS_ssid)
+{LangM.push({'Network24SSID':f.ssid.value,'Network24Passkey':PWS_key});}}
+return subForm(f,cPage,'WIFI_CONF,WIFI_SSID,SYS_BOOT',REBOOT_WAIT);}
+function moreinfowin(flagip){var win=window.open(flagip,'help','toolbar=0,status=0,menubar=0,scrollbars=1,resizable=1,width=530,height=400,left=150,top=150');win.focus();}
+function AutoChanSetExWchan()
+{if(document.tF.bandwidth.value==1&&document.tF.wbr.selectedIndex!=1)
+document.tF.ex_wchan.disabled=(!parseInt(document.tF.wchan.options[document.tF.wchan.selectedIndex].value))?true:false;}
+function wbrselectedchange(){if(document.tF.wbr.selectedIndex==1){document.tF.ex_wchan.disabled=true;document.tF.bandwidth.disabled=true;}else{if(document.tF.bandwidth.value==0)
+document.tF.ex_wchan.disabled=true;else
+document.tF.ex_wchan.disabled=false;document.tF.bandwidth.disabled=false;}
+AutoChanSetExWchan();}
+function bandwidthselectedchange(){if(document.tF.bandwidth.value==0){document.tF.ex_wchan.disabled=true;}else{document.tF.ex_wchan.disabled=false;}
+AutoChanSetExWchan();}
+function channelselectedchange()
+{var f=document.tF;if((parseInt(f.wchan.value)-SUPPORTED_CHANNEL_LO>=4)&&(SUPPORTED_CHANNEL-parseInt(f.wchan.value)>=4)){f.ex_wchan.options.length=2;f.ex_wchan.options[0].value=parseInt(f.wchan.options[f.wchan.selectedIndex].value)-4;f.ex_wchan.options[0].text=parseInt(f.wchan.options[f.wchan.selectedIndex].value)-4;f.ex_wchan.options[1].value=parseInt(f.wchan.options[f.wchan.selectedIndex].value)+4;f.ex_wchan.options[1].text=parseInt(f.wchan.options[f.wchan.selectedIndex].value)+4;}else if(SUPPORTED_CHANNEL-parseInt(f.wchan.options[f.wchan.selectedIndex].value)<4){f.ex_wchan.options.length=1;f.ex_wchan.options[0].value=parseInt(f.wchan.options[f.wchan.selectedIndex].value)-4;f.ex_wchan.options[0].text=parseInt(f.wchan.options[f.wchan.selectedIndex].value)-4;}else{f.ex_wchan.options.length=1;f.ex_wchan.options[0].value=parseInt(f.wchan.options[f.wchan.selectedIndex].value)+4;f.ex_wchan.options[0].text=parseInt(f.wchan.options[f.wchan.selectedIndex].value)+4;}
+AutoChanSetExWchan();}
+function init(){document.tF.ssid.value=PWS_ssid;bandwidthselectedchange();wbrselectedchange();ShowNavMenu();}
+function wl_closed_check()
+{var msg="Selecting Closed hides the network will disable the WPS, Are you sure? ";var wps_mode=1;var wps_version2=32;if(wps_version2!="0"&&wps_mode=="1"&&document.tF.hidessid.checked!=true&&!confirm(msg))
+document.tF.hidessid.checked=true;}</script>

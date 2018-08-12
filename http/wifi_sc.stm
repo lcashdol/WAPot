@@ -1,0 +1,185 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"lang="en"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"lang="en"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en"class="gt-ie8"><!--<![endif]--><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml"xmlns:v><![endif]--><head> <meta charset="utf-8"/><meta name="viewport"content="width=device-width"/> <title>Welcome to your Belkin router dashboard! </title><link rel="icon"href="/images/favicon.ico"><link rel="apple-touch-icon-precomposed"sizes="144x144"href="/images/belkin_144.png"><link rel="apple-touch-icon-precomposed"sizes="114x114"href="/images/belkin_114.png"><link rel="apple-touch-icon-precomposed"sizes="72x72"href="/images/belkin_72.png"><link rel="apple-touch-icon-precomposed"href="/images/belkin_57.png"> <link rel="stylesheet"href="/app.css"> <!--[if lt IE 9]> <link rel="stylesheet"href="/ie.css"> <![endif]--><!--[if IE]><?import namespace="v"implementation="#default#VML"?><![endif]--><script src="jquery.min.js"></script><script src="app.js"></script></head><script>var access_from=3;var PWS_ssid = "belkin.4b7";
+var PWS_key = "2ae886ec";
+var PWS_type = 4;
+var PWS_encrType = 2;
+var wps_version = 32;
+var ClientIP="192.168.2.3"
+var show_key=PWS_key.replace(/(?!^)./g,'&bull;');var ap_mode=0;var G_ip=G_svrip="192.168.2.1"
+var wf_key=PWS_key+"";</script><script LANGUAGE="JavaScript">var passphrase="Please enter a PassPhrase.";</script><script src="menu.js"></script><script src="global.js"></script><script src="main_header.js"></script><script src="routine.js"></script><script src="routine_data.js"></script> <div class="main container"> <div class="row"> <div class="eight columns"> <br> <br> <br> <table class="normal"width="440"style="width:440px!important"> <tr> <td style="border-bottom:solid 1px#ddd!important;"colspan="2"> <b><h4><font id="u_wl_band">2.4GHz<br></font></h4></b></td> </tr> <tr> <td id="s1_0"valign="middle"><b> <font tid="801"tok="ok">Security Mode</font></b></td> <td valign="middle"colspan="2"> <form name="tF"> <select class="selectList"onchange="selectedchange()"name="security_type"size="1"><option value="0"id="no_sec">Disabled</option> <option value="1"id="sec_64">64bit WEP</option> <option value="2"id="sec_128">128bit WEP</option> <option value="4"id="sec_wpa">WPA/WPA2-Personal (PSK)</option> </select> </form> </td> </tr> </table> <div id="wpapsk"style="display:none"> <form class="nice"target="OUTfrm"action="/cgi-bin/wireless_WPA.exe"method="post"name="tF0"> <input type="hidden"name="wpa_authen"value=1> <input type="hidden"name="wpa_psk"value=0> <input type="hidden"name="s_rekeysec"value=900000> <input type="hidden"name="s_rekeypkt"value=1000> <input type="hidden"name="w802_rekey"value=0> <input type="hidden"name="encryption"> <input type="hidden"name="security_type"value=4> <div class="row"> <div class="twelve columns"> <span id="u_wl_div"> <table id="tab1_0"class="normal"width="440"style="width:440px!important"> <tbody> <tr> <td id="u_wlarea"valign="top"colspan="3"> <span id="tab4_$d"> <span class="twelve columns"> <span class="drop-ip"> <label id="s18_$d"><b><font>Authentication</font></b></label><select size="1"name="authentication"onchange="authselectedchange()"> <option value=1>WPA-PSK</option><option value=2 selected>WPA2-PSK</option><option value=3>WPA-PSK+WPA2-PSK</option> </select> </span> <span class="drop-ip"> <label id="s19_$d"><b><font>Encryption Technique</font></b></label> <span id="sEncryption"></span> <span id="u_wl_encry_lst"style="display:none"> <select size="1"name="encryption_hid"class="selectList"> <option value=1>TKIP</option><option value=2 selected>AES</option><option value=3>TKIP+AES</option> </select> </span> <br><br></span> <span class="drop-ip"> <label id="s20_$d"><b><font>Pre-shared Key (PSK)</font></b></label> <span> <font id="u_wl_psktxt"style="display:none"> <input type="text"class="input-text csmall"maxlength="64"size="48"name="wpa_key_text"value=""></font> <font id="u_wl_pskpwd"style="display:none"> <input type="password"class="input-text csmall"maxlength="64"size="40"name="wpa_key_pass"value=""></font> </span> </span> <script>var obscurepsk=1;if(obscurepsk==1)
+{document.getElementById("u_wl_pskpwd").style.display="";document.getElementById("u_wl_psktxt").style.display="none";}
+else
+{document.getElementById("u_wl_pskpwd").style.display="none";document.getElementById("u_wl_psktxt").style.display="";}</script> <span class="drop-ip"> <label id="s21_$d"></label> <input type="checkbox"name="obscure_psk"value="1"onClick="click_obscure_psk()"> <b><font>Obscure PSK</font></b> </span> <SCRIPT LANGUAGE="JavaScript">document.tF0.obscure_psk.checked=true;
+document.tF0.wpa_key_pass.value="2ae886ec";
+document.tF0.wpa_key_text.value="2ae886ec";
+</SCRIPT> <span class="drop-ip"id="s22_$d"> <br><br><b><font>WPA-PSK (no server)</font>&nbsp;</b><font>Wi-Fi Protected Access with a Pre-shared Key: The key is a password, in the form of a word, phrase or series of letters and numbers. The key must be between <b>8</b> and <b>63</b> characters long and can include spaces and symbols, or <b>64</b> Hex (0-F) only. Each client that connects to the network must use the same key (Pre-shared Key).	</font> </span> </span></span></td></tr></tbody></table></span></div></div><br><a class="nice radius large green button"onclick="return evaltF_wpa();"href="#save">Save</a></form> </div><div id="disb"style="display:none"> <form class="nice"target="OUTfrm"action="/cgi-bin/wireless_e.exe"method="post"name="tF1"> <input type="hidden"name="security_type"value=0> <div class="row"> <div class="twelve columns"><table id="tab1_0"class="normal"width="440"style="width:440px!important"> <tbody><tr> <td id="u_wlarea"valign="top"colspan="3"> <div id="s2"> <font>You can configure wireless security/encryption settings here. Security should be enabled to assure maximum wireless security. WPA (Wi-Fi Protected Access) provides dynamic key changes and constitutes the best security solution. In wireless environments, where not all devices support WPA, WEP (Wired Equivalent Privacy) should be used.</font>&nbsp;<span id="u_mod_help$s"></span> </div> </td> </tr> </tbody> </table></div></div><a class="nice radius large green button"onclick="return evaltF_disable()"href="#save">Save</a></form></div><div id="wep64"style="display:none"><form class="nice"target="OUTfrm"action="/cgi-bin/wireless_wep.exe"method="post"name="tF2"> <input type=hidden name=wlkey1><input type=hidden name=wlkey2><input type=hidden name=wlkey3><input type=hidden name=wlkey4> <input type=hidden name=weptype value=0> <input type=hidden name=wepmode value=0> <input type=hidden name=wepprov value=0> <input type=hidden name=Generate value=0> <input type="hidden"name="Dot1X_enable"value="0"> <input type="hidden"name="security_type"value="1"> <div class="row"> <div class="twelve columns"> <span id="u_wl_div"> <table id="tab1_0"class="normal"width="440"style="width:440px!important"> <tbody><tr> <td id="u_wlarea"valign="top"colspan="3"><div id="tab2_$d"class="normal"width="440"style="width:440px!important"><span id="s4_$d"> <span><input type="radio"value="1"name="dkey"onclick="gochk(this.value);"> <b><font>Key&nbsp;1</font><font id="u_$skey1">&nbsp;&nbsp;:</font></b></span></span> <span class="drop-ip"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> </span> <script type="text/javascript">var i;for(i=1;i<6;i++)
+{document.write('<input type="hidden" name="k1',i,'" size="2" maxlength="2" value="">');}</script></div><span id="u_$skey2"style="display:none"> <span id="s5_$d"> <input type="radio"value="2"name="dkey"onclick="gochk(this.value);"> <b><font>Key&nbsp;2</font>&nbsp;2&nbsp;:</b> </span> <span class="drop-ip"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> </span> <script type="text/javascript">var i;for(i=1;i<6;i++)
+{document.write('<input type="hidden" name="k2',i,'" size="2" maxlength="2" value="">');}</script></span><span id="u_$skey3"style="display:none"> <span id="s6_$d"> <input type="radio"value="3"name="dkey"onclick="gochk(this.value);"> <b><font>Key&nbsp;3</font>&nbsp;3&nbsp;:</b> </span> <span class="drop-ip"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> </span> <script type="text/javascript">var i;for(i=1;i<6;i++)
+{document.write('<input type="hidden" name="k3',i,'" size="2" maxlength="2" value="">');}</script></span><span id="u_$skey4"style="display:none"> <span height="16"id="s7_$d"> <input type="radio"value="4"name="dkey"onclick="gochk(this.value);"> <font color="#004263"><b><font>Key&nbsp;4</font>&nbsp;4&nbsp;:</b></font> </span> <span> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> </span> <script type="text/javascript">var i;for(i=1;i<6;i++)
+{document.write('<input type="hidden" name="k4',i,'" size="2" maxlength="2" value="">');}document.tF2.dkey[0].checked ="true";
+keyIdx ="1";
+</script></span><span> <span id="s8_$d"></span> <span><b><font>(hex digit pairs)</font></b></span></span><span> <span id="s9_$d"> <font>NOTE:</font><font>To automatically generate hex pairs using a PassPhrase, push the button on the right and input the passphrase here. </font><br> </span></span><span class="twelve columns"> <span id="s10_$d"class="drop-ip"> <span><b><font>PassPhrase</font></b></span> <input type="text"class="input-text small csmall"maxlength="32"size="32"name="passphrase"> <a href="#gen"class="nice radius small green button"onClick="var f=document.tF2;Get64bitkey(f.passphrase.value, f.wlkey1, f.wlkey2, f.wlkey3, f.wlkey4, f.keys)"id="btngen">Generate</a> </span></span> </td> </tr> </tbody> </table> </span> </div> </div> <a class="nice radius large green button"onclick="return evaltF_wep64()"href="#save">Save</a></form></div><div id="wep128"style="display:none"> <form class="nice"name="tF3"method="post"action="/cgi-bin/wireless_wep.exe"target="OUTfrm"> <input type=hidden name=security_type value=2><input type=hidden name=weptype value=0> <input type=hidden name=wepmode value=1> <input type=hidden name=wepprov value=0> <input type="hidden"name="Dot1X_enable"value="0"> <input type=hidden name=Generate value=0> <div class="row"> <div class="twelve columns"><table id="tab1_0"class="normal"width="440"style="width:440px!important"> <tbody><tr> <td id="u_wlarea"valign="top"colspan="3"> <span id="tab3_$d"><div> <span id="s12_$d"> <font size="1"></font> </span> <span class="drop-ip"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> </span></div><div> <span id="s13_$d"></span> <span class="drop-ip"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> </span></div><div> <span id="s14_$d"></span> <span class="drop-ip"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"> <input type="text"class="input-text xsmall"maxlength="2"size="3"name="keys"><br> <b><font>(13 hex digit pairs)</font></b><input type="hidden"name="wlkey"><br><br> </span></div><script type="text/javascript">document.write('<input type=hidden  name=dkey value=1>');var i;for(i=1;i<14;i++)
+{if(i<10)
+{document.write('<input type="hidden" name="m1',i,'" size="2" maxlength="2" value="">');document.write('<input type="hidden" name="m2',i,'" size="2" maxlength="2" value="">');document.write('<input type="hidden" name="m3',i,'" size="2" maxlength="2" value="">');document.write('<input type="hidden" name="m4',i,'" size="2" maxlength="2" value="">');}
+else
+{document.write('<input type="hidden" name="m1',i,'" size="2" maxlength="2" value="">');document.write('<input type="hidden" name="m2',i,'" size="2" maxlength="2" value="">');document.write('<input type="hidden" name="m3',i,'" size="2" maxlength="2" value="">');document.write('<input type="hidden" name="m4',i,'" size="2" maxlength="2" value="">');}}</script><div> <span id="s15_$d"> <font>NOTE:</font><font>To automatically generate hex pairs using a PassPhrase, push the button on the right and input the passphrase here. </font> </span></div><span class="twelve columns"id="s16_$d"> <span class="drop-ip"> <span> <b><font>PassPhrase</font></font></b> </span> <input type="text"class="input-text small csmall"maxlength="32"size="32"name="passphrase"> <a href="#gen"class="nice radius small green button"onclick="var f=document.tF3;Get128bitkey(f.passphrase.value, f.wlkey, f.keys)"id="btngen">Generate</a> </span> </span></td></tr></tbody></table></div></div> <a class="nice radius large green button"onclick="return evaltF_wep128()"href="#save">Save</a></form></div></div><div class="sidebar four columns"> <div><h6><span tid="htWifiSec"tok="ok">What is Wi-Fi Security? </span></h6><p><span tid="htWifiSecContent"tok="ok">All Belkin routers ship with Wi-Fi security enabled.  Wi-Fi security provides a layer of protection against unauthorized access to your network.  When security is on, user will need a password to access your network. </span><span class="nub"></span></p></div> </div></div><div class="column-row hide-on-desktops"> <div class="sixteen columns"> <ul class="sub-nav"id="mob_sub_nav"></ul> </div> </div></div><script src="main_footer.js"></script><script>var keyIdx='1';var passphrase="Please enter a PassPhrase.";var keyerror="Either you have not entered all of the hex digits or some of the hex digits you entered are invalid. A hex digit can be a number from 0-9 or a letter from A-F.";var keystr1="Key";var keystr2="Key";var keystr3="Key";var keystr4="Key";var completekeyerror2=" is not complete.";var completekeyerror1=" is invalid, please correct it first! ";var wepkeys=new Array("","","","");var enableOS=0;
+var enableWEP=0;
+var enableSSN=1;
+var enableSSNPSK=1;
+var WEPKEYTYPE=0;
+var wpaflag=1;
+var wireless_mode=9;
+var secu_type=9;
+var NO_ENCRYPTION=0;
+var WEP64BIT=1;
+var WEP128BIT=2;
+var WPAWPA2_RADIUS=3;
+var WPAWPA2_PSK=4;
+var wirelessenable=1;function gochk(idx){keyIdx=idx;}
+function toHEXString(hex)
+{var value='';hex&=0xFF;var v1=Math.floor(hex/16);var v2=hex%16;if(v1>=10)
+value+=''+String.fromCharCode(65+(v1-10));else
+value+=''+v1;if(v2>=10)
+value+=''+String.fromCharCode(65+(v2-10));else
+value+=''+v2;return value;}
+function Get64bitkey(input,k0,k1,k2,k3,ks)
+{var i,j,len;var ps0,ps1,ps2,ps3;len=input.length;if(len<=0)
+{alert(passphrase);return;}
+ps0=ps1=ps2=ps3=0;for(i=0;i<len;i++)
+{switch(i%4)
+{case 0:ps0^=(input.charCodeAt(i)&0x00FF);break;case 1:ps1^=(input.charCodeAt(i)&0x00FF);break;case 2:ps2^=(input.charCodeAt(i)&0x00FF);break;case 3:ps3^=(input.charCodeAt(i)&0x00FF);break;}}
+var randNumber=(ps0&0xFF)|((ps1&0xFF)<<8)|((ps2&0xFF)<<16)|((ps3&0xFF)<<24);for(i=0;i<4;i++)
+{var tmp;switch(i)
+{case 0:tmp=k0;break;case 1:tmp=k1;break;case 2:tmp=k2;break;case 3:tmp=k3;break;}
+tmp.value='';for(j=0;j<5;j++)
+{randNumber*=0x343fd;randNumber+=0x269ec3;randNumber&=0xFFFFFFFF;tmp.value+=toHEXString((randNumber>>16)&0x7fff);}}
+var l1='';var l2='';var l3='';var l4='';var buf1='';var buf2='';var buf3='';var buf4='';var dp1='';var dp2='';var dp3='';var dp4='';dp1=k0.value;dp2=k1.value;dp3=k2.value;dp4=k3.value;for(i=0;i<5;i++){l1=i*2;buf1='';buf1=dp1.charAt(l1);buf1=buf1.concat(dp1.charAt(l1+1));ks[i].value=buf1.toUpperCase();}
+for(i=0;i<5;i++){l2=i*2;buf2='';buf2=dp2.charAt(l2);buf2=buf2.concat(dp2.charAt(l2+1));ks[i+5].value=buf2.toUpperCase();}
+for(i=0;i<5;i++){l3=i*2;buf3='';buf3=dp3.charAt(l3);buf3=buf3.concat(dp3.charAt(l3+1));ks[i+10].value=buf3.toUpperCase();}
+for(i=0;i<5;i++){l4=i*2;buf4='';buf4=dp4.charAt(l4);buf4=buf4.concat(dp4.charAt(l4+1));ks[i+15].value=buf4.toUpperCase();}}
+function frmload(){var WPSenable=1;if(WPSenable)
+alert("It is recommended to use WPA/WPA2 when WPS is enabled. ");}
+function evaltF_wep64(){var f=document.tF2;var i,j,fidx,f1,f2,f,k,h,m;var jj,ff,fff;var y_array=new Array(5);var kk_array=new Array(22);for(i=0;i<4;i++){var k;if(keyIdx==(i+1)){for(k=i*5;k<i*5+5;k++){var str=f.keys[k].value;var j=str.length;if(j<2){if(str!="00"){switch(i){case 0:alert(keystr1+" 1 "+completekeyerror2);break;case 1:alert(keystr2+" 2 "+completekeyerror2);break;case 2:alert(keystr3+" 3 "+completekeyerror2);break;case 3:alert(keystr4+" 4 "+completekeyerror2);break;default:alert(keystr1+" 1 "+completekeyerror2);break;}
+return false;}}
+else{if(is2Hex(f.keys[k].value)){alert(keyerror);return false;}}}}
+else{var m=0,n=0;for(k=i*5;k<i*5+5;k++){var str=f.keys[k].value;var j=str.length;if(j<2){if(str=="00"){n++}
+else{m++;}}
+else{if(is2Hex(f.keys[k].value)){alert(keyerror);return false;}}}
+if(m<5&&m!=0){switch(i){case 0:alert(keystr1+" "+completekeyerror2);break;case 1:alert(keystr2+" "+completekeyerror2);break;case 2:alert(keystr3+" "+completekeyerror2);break;case 3:alert(keystr4+" "+completekeyerror2);break;default:alert(keystr1+" "+completekeyerror2);break;}
+return false;}}}
+f.wlkey1.value=f.keys[0].value+f.keys[1].value+f.keys[2].value+f.keys[3].value+f.keys[4].value;f.wlkey2.value=f.keys[5].value+f.keys[6].value+f.keys[7].value+f.keys[8].value+f.keys[9].value;f.wlkey3.value=f.keys[10].value+f.keys[11].value+f.keys[12].value+f.keys[13].value+f.keys[14].value;f.wlkey4.value=f.keys[15].value+f.keys[16].value+f.keys[17].value+f.keys[18].value+f.keys[19].value;for(i=1;i<5;i++){fff="wlkey"+i;fidx=getElementsByFieldName(f,fff);y_array[i]=f.elements[fidx].value;k=0;for(jj=1;jj<6;jj++){if(k==0)
+k=jj;else
+k=jj+(jj-1);ff="k"+i+jj;fidx=getElementsByFieldName(f,ff);f.elements[fidx].value=y_array[i].substr((k-1),2);}}
+if(access_from==3)
+{security_type=1;key=f.wlkey1.value;if((key!=PWS_key)||(security_type!=secu_type))
+{LangM.push({'Network24SSID':PWS_ssid,'Network24Passkey':key});}}
+return subForm(document.tF2,cPage,'WIFI_CONF,SYS_BOOT',REBOOT_WAIT);}
+var passphrase="Please enter a PassPhrase.";var keyerror="Either you have not entered all of the hex digits or some of the hex digits you entered are invalid. A hex digit can be a number from 0-9 or a letter from A-F.";var completekeyerror="Key is not complete.";var enableOS=0;
+var enableWEP=0;
+var enableSSN=1;
+var enableSSNPSK=1;
+var WEPKEYTYPE=0;
+var wpaflag=1;
+var wireless_mode=9;
+var secu_type=9;
+var NO_ENCRYPTION=0;
+var WEP64BIT=1;
+var WEP128BIT=2;
+var WPAWPA2_RADIUS=3;
+var WPAWPA2_PSK=4;
+var wirelessenable=1;function Get128bitkey(input,k,ks)
+{var str=input;var i,j,len;var key="";var t="";var md5key="";len=input.length;if(len<=0)
+{alert(passphrase);return;}
+for(i=0;i<64;i++)
+{j=i%len;t=str.charAt(j);key=key.concat(t);}
+md5key=calcMD5(key);k.value=md5key.substring(0,26);var l;var buf='';var digpairs='';digpairs=k.value;for(i=0;i<13;i++){l=i*2;buf='';buf=digpairs.charAt(l);buf=buf.concat(digpairs.charAt(l+1));ks[i].value=buf.toUpperCase();}}
+function frmload(){var WPSenable=1;if(WPSenable)
+alert("It is recommended to use WPA/WPA2 when WPS is enabled. ");}
+function evaltF_wep128(){var f=document.tF3;var i,j,fidx,f1,f2,f,k;var jj,ff,fff;var y_array=new Array(5);var kk_array=new Array(22);for(i=0;i<13;i++){var str=f.keys[i].value;var j=str.length;if(j<2){if(str!="00"){alert(completekeyerror);return false;}}
+else{if(is2Hex(f.keys[i].value)){alert(keyerror);return false;}}}
+f.wlkey.value=f.keys[0].value+f.keys[1].value+f.keys[2].value+f.keys[3].value+f.keys[4].value
++f.keys[5].value+f.keys[6].value+f.keys[7].value+f.keys[8].value+f.keys[9].value
++f.keys[10].value+f.keys[11].value+f.keys[12].value;for(i=1;i<5;i++){fff="wlkey";fidx=getElementsByFieldName(f,fff);y_array[i]=f.elements[fidx].value;k=0;for(jj=1;jj<14;jj++){if(k==0)
+k=jj;else
+k=jj+(jj-1);ff="m"+i+jj;fidx=getElementsByFieldName(f,ff);f.elements[fidx].value=y_array[i].substr((k-1),2);}}
+if(access_from==3)
+{security_type=2;key=f.wlkey.value;if((key!=PWS_key)||(security_type!=secu_type))
+{LangM.push({'Network24SSID':PWS_ssid,'Network24Passkey':key});}}
+return subForm(document.tF3,cPage,'WIFI_CONF,SYS_BOOT',REBOOT_WAIT);}
+var prekeyerror="The length of pre-shared key should be 8 to 63 or 64 Hex";var obscurepsk=1;var enableOS=0;
+var enableWEP=0;
+var enableSSN=1;
+var enableSSNPSK=1;
+var WEPKEYTYPE=0;
+var wpaflag=1;
+var wireless_mode=9;
+var secu_type=9;
+var NO_ENCRYPTION=0;
+var WEP64BIT=1;
+var WEP128BIT=2;
+var WPAWPA2_RADIUS=3;
+var WPAWPA2_PSK=4;
+var wirelessenable=1;var wps_version2=32;var PWS_type_bk=PWS_type;function selectedchange_RT()
+{document.tF.security_type.value=PWS_type_bk-1;if(PWS_type_bk==1)
+document.getElementById("disb").style.display="";else if(PWS_type_bk==2)
+document.getElementById("wep64").style.display="";else if(PWS_type_bk==3)
+document.getElementById("wep128").style.display="";else
+document.getElementById("wpapsk").style.display="";}
+function selectedchange(){var f=document.tF;var msg="Selecting WEP Encryption will disable the WPS, Are you sure? ";var msg1="Are you sure to configure WPS in Open security? "
+HiddenObject("disb");HiddenObject("wep64");HiddenObject("wep128");HiddenObject("wpapsk");if(f.security_type.value==0){if(wps_version2!="0"){if(confirm(msg1))
+document.getElementById("disb").style.display="";else
+selectedchange_RT();}
+else
+document.getElementById("disb").style.display="";}
+else if(f.security_type.value==1){if(wps_version2!="0"){if(confirm(msg)){document.getElementById("wep64").style.display="";alert('It is recommended to use WPA/WPA2 when WPS is enabled. ');}
+else
+selectedchange_RT();}
+else
+{document.getElementById("wep64").style.display="";alert('It is recommended to use WPA/WPA2 when WPS is enabled. ');}}
+else if(f.security_type.value==2){if(wps_version2!="0"){if(confirm(msg)){document.getElementById("wep128").style.display="";alert('It is recommended to use WPA/WPA2 when WPS is enabled. ');}
+else
+selectedchange_RT();}
+else
+{document.getElementById("wep128").style.display="";alert('It is recommended to use WPA/WPA2 when WPS is enabled. ');}}
+else{document.getElementById("wpapsk").style.display="";}
+PWS_type_bk=f.security_type.value+1;return true;}
+function evaltF_disable()
+{if(access_from==3)
+{security_type=0;if(security_type!=secu_type)
+{LangM.push({'Network24SSID':PWS_ssid});}}
+return subForm(document.tF1,cPage,'WIFI_CONF,SYS_BOOT',REBOOT_WAIT);}
+function evaltF_wpa(){var f=document.tF0;var value;var len;var maxSize=64;var minSize=8;if(f.obscure_psk.checked==false)
+value=f.wpa_key_text.value;else
+value=f.wpa_key_pass.value;len=value.length;if(isNVaidWPAChar(value)){alert("Your network password can only contain letters, numbers, punctuation, and spaces. ");f.wpa_key_text.focus();return false;}
+f.encryption.value=f.encryption_hid.value;if(len>=minSize&&len<maxSize)
+{if(access_from==3)
+{security_type=4;if((value!=PWS_key)||(security_type!=secu_type))
+{LangM.push({'Network24SSID':PWS_ssid,'Network24Passkey':value});}}
+return subForm(document.tF0,cPage,'WIFI_CONF,SYS_BOOT',REBOOT_WAIT);}
+else if(len==maxSize)
+{if(!isHex(value)){alert(prekeyerror);return false;}
+else
+{if(access_from==3)
+{security_type=4;if((value!=PWS_key)||(security_type!=secu_type))
+{LangM.push({'Network24SSID':PWS_ssid,'Network24Passkey':value});}}
+return subForm(document.tF0,cPage,'WIFI_CONF,SYS_BOOT',REBOOT_WAIT);}}
+else if(len<minSize){alert(prekeyerror);return false;}
+else{alert(prekeyerror);return false;}}
+function click_obscure_psk(){var f=document.tF0;if(f.obscure_psk.checked==true){f.wpa_key_pass.value=f.wpa_key_text.value;document.getElementById("u_wl_psktxt").style.display="none";document.getElementById("u_wl_pskpwd").style.display="";}
+else{f.wpa_key_text.value=f.wpa_key_pass.value;document.getElementById("u_wl_pskpwd").style.display="none";document.getElementById("u_wl_psktxt").style.display="";}}
+function loaded(){if(obscurepsk==1){document.getElementById("u_wl_psktxt").style.display="none";document.getElementById("u_wl_pskpwd").style.display="";}else{document.getElementById("u_wl_pskpwd").style.display="none";document.getElementById("u_wl_psktxt").style.display="";}
+authselectedchange(1);}
+function moreinfowin(flagip){var win=window.open(flagip,'help','toolbar=0,status=0,menubar=0,scrollbars=1,resizable=1,width=530,height=400,left=150,top=150');win.focus();}
+function authselectedchange(flag){var f=document.tF0;{if(f.authentication.value==2){f.encryption_hid.value=2;}else if(f.authentication.value==1){f.encryption_hid.value=1;}else{f.encryption_hid.value=3;}}
+f.encryption.value=f.encryption_hid.value;if(f.encryption.value==1){if(flag==1||wps_version2=="0")
+document.getElementById("sEncryption").innerHTML="TKIP";else
+{var msg="Selecting WPA/TKIP Encryption will disable the WPS, Are you sure? ";if(wps_version2!="0")
+if(confirm(msg))
+document.getElementById("sEncryption").innerHTML="TKIP";else
+{if(document.getElementById("sEncryption").innerHTML=="TKIP"){f.authentication.value=1;f.encryption_hid.value=1;f.encryption.value=1;}
+else if(document.getElementById("sEncryption").innerHTML=="TKIP+AES"){f.authentication.value=3;f.encryption_hid.value=3;f.encryption.value=3;}
+else{document.getElementById("sEncryption").innerHTML="AES";f.authentication.value=2;f.encryption_hid.value=2;f.encryption.value=2;}}}}
+else if(f.encryption.value==2)
+document.getElementById("sEncryption").innerHTML="AES";else
+document.getElementById("sEncryption").innerHTML="TKIP+AES";}
+function init(){switch(secu_type){case 0:DisplayObject("disb");document.getElementById("no_sec").selected=true;break;case 1:DisplayObject("wep64");document.getElementById("sec_64").selected=true;break;case 2:DisplayObject("wep128");document.getElementById("sec_128").selected=true;break;default:DisplayObject("wpapsk");document.getElementById("sec_wpa").selected=true;loaded();break;}
+ShowNavMenu();}</SCRIPT>

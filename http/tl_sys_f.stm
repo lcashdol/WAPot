@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"lang="en"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"lang="en"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en"class="gt-ie8"><!--<![endif]--><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml"xmlns:v><![endif]--><head> <meta charset="utf-8"/><meta name="viewport"content="width=device-width"/> <title>Welcome to your Belkin router dashboard! </title><link rel="icon"href="/images/favicon.ico"><link rel="apple-touch-icon-precomposed"sizes="144x144"href="/images/belkin_144.png"><link rel="apple-touch-icon-precomposed"sizes="114x114"href="/images/belkin_114.png"><link rel="apple-touch-icon-precomposed"sizes="72x72"href="/images/belkin_72.png"><link rel="apple-touch-icon-precomposed"href="/images/belkin_57.png"> <link rel="stylesheet"href="/app.css"> <!--[if lt IE 9]> <link rel="stylesheet"href="/ie.css"> <![endif]--><!--[if IE]><?import namespace="v"implementation="#default#VML"?><![endif]--><script src="jquery.min.js"></script><script src="app.js"></script></head><script>var access_from=3;var PWS_ssid = "belkin.4b7";
+var PWS_key = "2ae886ec";
+var PWS_type = 4;
+var PWS_encrType = 2;
+var wps_version = 32;
+var ClientIP="192.168.2.3"
+var show_key=PWS_key.replace(/(?!^)./g,'&bull;');var ap_mode=0;var G_ip=G_svrip="192.168.2.1"
+var wf_key=PWS_key+"";</script><script src="menu.js"></script><script src="global.js"></script><script src="main_header.js"></script><div class="main container"> <div class="row"><div class="eight columns"> <div id="p2300"><div class="separator"id="p1100sep"style="display:none"> <div class="tpad30 show-on-desktops"></div> <div id="p1100content"> <h2 tid="p1100t001">A firmware update is available! </h2> <p class="lead"tid="p1100t002">We recommend upgrading your router to the newest firmware to ensure everything functions properly.</p> <a href="#"class="large green button nice radius"id="p1100a003"tid="p1100t003">Show me what's new</a> </div></div><div id="p1302"class="ancillary plustop"style="font-weight:bold;display:none"> <img src="images/Checkmark.png"alt="Checkmark"></img><span tid="p1302t001">Your firmware is up to date.</span></div><div id="p1316"class="ancillary plustop"style="font-weight:bold;display:none"> <span tid="p1316t001">Installation of updated firmware failed - please try again by clicking "Check for New Firmware".</span></div><div id="p1318"class="ancillary plustop"style="font-weight:bold;display:none"> <span tid="p1318t001">Upgrade file is not the correct type or version for this device. Upgrade failed. Please obtain the correct file and try again.</span></div> <div id="p1333"class="ancillary plustop"style="font-weight:bold;display:none"> <img src="images/Checkmark.png"alt="Checkmark"></img><span tid="p1333t001">Your firmware has been successfully updated.</span> </div><div class="row"id="fmw_ver"><form class="nice"enctype="multipart/form-data"name="webForm"method="post"action="/cgi-bin/upgrade.exe"target="OUTfrm"> <input name=target TYPE=hidden VALUE=5><br><div class="tspace15"> <a href="#checkfmw"id="p2300a010"onClick="return ShowCheckVersion()"tid="p2300t010"class="nice radius large green button">Check for New Firmware Version</a> </div> <h4 tid="gtRouter">Router</h4> <h5 tid="p2300t001">Your Installed Firmware Version:</h5> <p id="currVer"></p> <div class="hide-on-iOS"id="upload_file"> <h5 tid="p2300t002">Update Firmware From Locally Saved File:</h5><input type="file"id="p2300a004"size="25"maxlength="31"name="webUpload"> <span tid="p2300t006"style="display:none">Are you sure you want to install {{file}}?</span><span tid="gtFileInstallError"style="display:none">That file couldn't be installed ??perhaps it's the wrong file type</span> </div><div id="upload_mobile"style="display:none"> <b tid="1199"></b> </div> </form></div> </div> </div><div class="sidebar four columns"> <div><h6 tid="p300t003">What are firmware updates? </h6> <p><span tid="p300t004">From time to time, Belkin may release new versions of your router's operating programming. These updates contain improvements and fixes for your router. </span> <span class="nub"></span></p> </div> </div></div> </div><script src="main_footer.js"></script><script>G_NO_APPLY=1;function doConfirm(msg){if(confirm(msg)){alert("At the end of the upgrade, the Router may not respond to commands for as long as one minute. This is normal. Do not turn off or reboot the Router during this time.");return true;}
+return false;}
+function eval_Upgrade()
+{var f=document.webForm;var msg=$("[tid='p2300t006']").text();var file=$('#p2300a004').val();file=file.replace("C:\\fakepath\\","");msg=msg.replace("{{file}}",file);if(f.webUpload.value.length==0){alert("Please specify the upgrade file\'s location. Either type the file\'s path and file name or click \"Browse\" to browse to the file\'s location.");return false;}
+if(doConfirm(msg)){HiddenObject("p1100");HiddenObject("p2300a010");HiddenObject("p1316");HiddenObject("p1318");HiddenObject("p1333");HiddenObject("p1302");HiddenObject("p1100sep");top.G_wizard=1;top.G_boot=1;show_GUI2320();return subForm(f,function(){if(top.G_err>0){fmw_upd=1;dev_debug("file check OK");}else{fmw_upd=0;dev_debug("file check error!");stopProg();Show_Manually(null,-2);}},'SYS_BOOT',0);}
+return false;}
+function show_GUI2320(){showPage("#p315",function(){show_320();});}
+function Show_Manually(verinfo,err){HiddenObject("p1100sep");var msg='';$('#p2300a004').val("");if(err<0){if(err==-1){DisplayObject("p1316");DisplayObject("p2300a010");}else{DisplayObject("p1318");}}else if(err==1){DisplayObject("p1333");DisplayObject("p2300a010");}else{DisplayObject("p1302");}
+closeModal();hidePage();top.G_lock=0;}
+function show_GUI2300(no_show){showPage("#p300",function(){start_300();});}
+function show_GUI1110(){hidePage("#p300");DisplayObject("p1100sep");HiddenObject("p2300a010");EnableObject('p1100a003');}
+function show_GUI2310(){top.G_boot=1;reloadPage("310.htm","#p310",function(){showPage("#p310");});}
+var fromdash=0;function ShowCheckVersion(){if(wandetobj.wanst!=2)return false;HiddenObject("p1100sep");HiddenObject("p1316");HiddenObject("p1333");HiddenObject("p1302");var tg=GetTags();SetTags("");if(tg=="#310"){fromdash=1;show_GUI2310();}else{show_GUI2300();}
+return false;}
+function show_DASHBOARD(tag){if(fromdash){top.G_lock=0;SetTags(tag);return JumpTo();}else{closeModal(function(){updateVersion(''+RouterStatus.version);Show_Manually(null,1);top.G_boot=0;setTimeout("ShowWANState(0)",5000);});}}
+function reload_ver(_cb){$.getScript("/cgi-bin/RouterStatus.api",function(){if(_cb)_cb(RouterStatus.version);});}
+var DO_FMW_OK="#321";function dlfw_end(state)
+{switch(state){case 1:dev_debug("upgrade success");show_DASHBOARD(DO_FMW_OK);break;case-1:dev_debug("download fail");Show_Manually(null,-1);break;case 2:default:dev_debug("no new fw");Show_Manually(null,0);}}
+function foundNewFw()
+{show_GUI1110();}
+function updateVersion(u_run_ver)
+{setIdVal("currVer",FMW_date_conv(u_run_ver));}
+function init(){loadPage("300.htm","#p300")
+loadPage("315.htm","#p315");var f=document.tF;var if_number=3;
+var bWanConnected=1;
+var bWanUseModem=0;
+var wan_type=0;
+var wan_ip="10.10.37.90";
+var wan_subnet_mask="255.255.192.0";
+var wan_gateway="10.10.0.1";
+var primary_dns="68.105.28.12";
+var secondary_dns="68.105.29.11";
+var lan_gateway_ip="192.168.2.1";
+var lan_gateway_mask="255.255.255.0";
+var dhcpEnbl=1;
+var wlenbl=1;
+var enfirewall=1;
+var r_mgnt_enabled = 0
+var upnp_enable=1;
+var wireless_func=1;
+var wlenbl=1;
+var hide="0";
+var w11a_enable=0;
+var ipsec_func=0;
+var printer_func=0;
+var dhcp_client_num=3;
+var dhcp_wlanclient_num=3;
+var dhcp_start_ip="192.168.2.2";
+var dhcp_end_ip="192.168.2.200";
+var runtime_code_version="5.03.20(Dec  2 2014)";
+var boot_code_version="0.12";
+var wlan_mac_addr="EC:1A:59:BA:84:B7";
+var lan_mac_addr="EC:1A:59:BA:84:B7";
+var wan_mac_addr="EC:1A:59:BA:84:B8";
+var hardware_version="01B";
+var serial_number="12332GC2501799";
+var model_name="F9K1002v5";
+var bEncPassword=1;var eco_mode=1;
+var bInetOK=1;
+updateVersion(runtime_code_version);$('#p2300a004').val("");ShowNavMenu();$('#p1100a003').click(function(){DisableObject('p1100a003');show_GUI2310();return false;});$('#p2300a004').change(function(e){eval_Upgrade();});setTimeout("ShowCheckVersion()",1000);}</script>

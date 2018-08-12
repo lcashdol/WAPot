@@ -1,0 +1,53 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"lang="en"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"lang="en"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en"class="gt-ie8"><!--<![endif]--><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml"xmlns:v><![endif]--><head> <meta charset="utf-8"/><meta name="viewport"content="width=device-width"/> <title>Welcome to your Belkin router dashboard! </title><link rel="icon"href="/images/favicon.ico"><link rel="apple-touch-icon-precomposed"sizes="144x144"href="/images/belkin_144.png"><link rel="apple-touch-icon-precomposed"sizes="114x114"href="/images/belkin_114.png"><link rel="apple-touch-icon-precomposed"sizes="72x72"href="/images/belkin_72.png"><link rel="apple-touch-icon-precomposed"href="/images/belkin_57.png"> <link rel="stylesheet"href="/app.css"> <!--[if lt IE 9]> <link rel="stylesheet"href="/ie.css"> <![endif]--><!--[if IE]><?import namespace="v"implementation="#default#VML"?><![endif]--><script src="jquery.min.js"></script><script src="app.js"></script></head><script>var access_from=3;var PWS_ssid = "belkin.4b7";
+var PWS_key = "2ae886ec";
+var PWS_type = 4;
+var PWS_encrType = 2;
+var wps_version = 32;
+var ClientIP="192.168.2.3"
+var show_key=PWS_key.replace(/(?!^)./g,'&bull;');var ap_mode=0;var G_ip=G_svrip="192.168.2.1"
+var wf_key=PWS_key+"";</script><script src="menu.js"></script><script src="global.js"></script><script src="main_header.js"></script><script src="routine.js"></script><div class="main container"> <div class="row"><div class="eight columns"><form name="tF"action="/cgi-bin/setup_dns.exe"method="post"target="OUTfrm"><div class="row"> <div class="twelve columns"><br><br><p class="drop-ip"><label class="has-more"><b><font>Automatic from ISP</font></b></span> </label> <input type="checkbox"name="auto_from_isp"value="1"onClick="enableStatic()"> </p> <script language="JavaScript">var auto='1';if(auto=='1'){document.tF.auto_from_isp.defaultChecked=true;document.tF.auto_from_isp.checked=true;}</script><p class="drop-ip"><label class="has-more"><b><font>DNS Address</font></b></span> </label> <input name="dns1_1"size=3 maxlength=3 value="0"> <input name="dns1_2"size=3 maxlength=3 value="0"> <input name="dns1_3"size=3 maxlength=3 value="0"> <input name="dns1_4"size=3 maxlength=3 value="0"> </p><p class="drop-ip"><label class="has-more"><b><font>Secondary DNS Address</font></b></span> </label> <input name="dns2_1" size=3 maxlength=3 value="0"> 
+<input name="dns2_2" size=3 maxlength=3 value="0">
+<input name="dns2_3" size=3 maxlength=3 value="0">
+<input name="dns2_4" size=3 maxlength=3 value="0">
+ </p></div></div><br><a href="#save"class="nice radius large green button"onClick="return evaltF()"id="dnsapply">Save</a>&nbsp;&nbsp;</form></div><div class="sidebar four columns"> <div><h6>What is DNS? </h6> <p> <span id="dns_warn"style="display:none"><b><span>To make DNS changes, first visit <a href=fw_parent.stm><font color="#0066FF">Website Filter</font></a> and select "NO Filter". </span></b></span> </p> <p><span>The domain name service (DNS) translates domain names into IP addresses for locating computer services and devices worldwide. If your Internet service provider (ISP) has given you a DNS address to use, enter it here. </span><span class="nub"></span></p> </div> </div><div class="column-row hide-on-desktops"> <div class="sixteen columns"> <ul class="sub-nav"id="mob_sub_nav"></ul> </div> </div></div> </div><script src="main_footer.js"></script><script>var CHK_SECDNS=1;var lastIpError='Invalid IP address, the first number should be between 1 and 223. ';var ipm='Invalid IP address, the second and the third number should be between 0 and 255. ';var ipmLast='Invalid IP address, the last number should be between 1 and 254.';var dnsType="0";function isZero(s){var i;var c;for(i=0;i<s.length;i++)
+{c=s.charAt(i);if((c!='0'))return false;}
+if(i==0)
+{return false;}
+return true;}
+function isValidIpAddress(address){var i=0;if(address=='0.0.0.0'||address=='255.255.255.255'||address=='127.0.0.1')
+return false;addrParts=address.split('.');if(addrParts.length!=4)return false;for(i=0;i<4;i++){if(isNaN(addrParts[i]))
+return false;num=parseInt(addrParts[i]);if(num<0||num>255)
+return false;if((i==0)&&(num>=224&&num<=255)){return false;}
+if((i==3)&&(num==0)){return false;}}
+return true;}
+function evaltF()
+{var dns1=document.tF.dns1_1.value+"."+document.tF.dns1_2.value+"."+document.tF.dns1_3.value+"."+document.tF.dns1_4.value;var dns2=document.tF.dns2_1.value+"."+document.tF.dns2_2.value+"."+document.tF.dns2_3.value+"."+document.tF.dns2_4.value;var Specify="Specify IP Address";var Sinvalid=" is invalid, please correct it first! ";var message;if(document.tF.auto_from_isp.checked==false)
+{if(!(isBlank_Zero(document.tF.dns1_1.value))||!(isBlank_Zero(document.tF.dns1_2.value))||!(isBlank_Zero(document.tF.dns1_3.value))||!(isBlank_Zero(document.tF.dns1_4.value))){if(isNValidIP_p(document.tF.dns1_1.value,1,223)){alert(lastIpError);return false;}
+if(isNValidIP_p(document.tF.dns1_2.value,0,255)){alert(ipm);return false;}
+if(isNValidIP_p(document.tF.dns1_3.value,0,255)){alert(ipm);return false;}
+if(isNValidIP_p(document.tF.dns1_4.value,1,254)){alert(ipmLast);return false;}}
+if(!(isBlank_Zero(document.tF.dns2_1.value))||!(isBlank_Zero(document.tF.dns2_2.value))||!(isBlank_Zero(document.tF.dns2_3.value))||!(isBlank_Zero(document.tF.dns2_4.value))){if(isNValidIP_p(document.tF.dns2_1.value,1,223)){alert(lastIpError);return false;}
+if(isNValidIP_p(document.tF.dns2_2.value,0,255)){alert(ipm);return false;}
+if(isNValidIP_p(document.tF.dns2_3.value,0,255)){alert(ipm);return false;}
+if(isNValidIP_p(document.tF.dns2_4.value,1,254)){alert(ipmLast);return false;}}
+if((isZero(document.tF.dns1_1.value))&&(isZero(document.tF.dns1_2.value))&&(isZero(document.tF.dns1_3.value))&&(isZero(document.tF.dns1_4.value))){alert("You must enter the DNS settings provided by your ISP if you don\'t use the Automatic DNS function.");return false;}
+if(!isValidIpAddress(dns1)){alert(Specify+" "+dns1+" "+Sinvalid);return false;}
+if(document.tF.dns1_1.value.length==0||document.tF.dns1_2.value.length==0||document.tF.dns1_3.value.length==0||document.tF.dns1_4.value.length==0){alert('DNS Address: The IP that you entered is invalid');return false;}
+if((!isZero(document.tF.dns2_1.value))&&(!isZero(document.tF.dns2_2.value))&&(!isZero(document.tF.dns2_3.value))&&(!isZero(document.tF.dns2_4.value))){if(!isValidIpAddress(dns2)){alert(Specify+" "+dns2+" "+Sinvalid);return false;}}
+for(i=1;i<=4;i++)
+if(document.tF.elements['dns2_'+i].value.length==0)document.tF.elements['dns2_'+i].value="0";}
+return subForm(document.tF,cPage,'SYS_BOOT',REBOOT_WAIT);}
+function moreinfowin(flagip){var win=window.open(flagip,'help','toolbar=0,status=0,menubar=0,scrollbars=1,resizable=1,width=530,height=400,left=150,top=150');win.focus();}
+function enableStatic()
+{if(document.tF.auto_from_isp.checked==true)
+{document.tF.dns1_1.disabled=true;document.tF.dns1_2.disabled=true;document.tF.dns1_3.disabled=true;document.tF.dns1_4.disabled=true;document.tF.dns2_1.disabled=true;document.tF.dns2_2.disabled=true;document.tF.dns2_3.disabled=true;document.tF.dns2_4.disabled=true;}
+else
+{document.tF.dns1_1.disabled=false;document.tF.dns1_2.disabled=false;document.tF.dns1_3.disabled=false;document.tF.dns1_4.disabled=false;document.tF.dns2_1.disabled=false;document.tF.dns2_2.disabled=false;document.tF.dns2_3.disabled=false;document.tF.dns2_4.disabled=false;}}
+function checkSecDNS(){if(dnsType==0)
+enableStatic();else{DisplayObject("dns_warn");document.tF.auto_from_isp.disabled=true;document.tF.dns1_1.disabled=true;document.tF.dns1_2.disabled=true;document.tF.dns1_3.disabled=true;document.tF.dns1_4.disabled=true;document.tF.dns2_1.disabled=true;document.tF.dns2_2.disabled=true;document.tF.dns2_3.disabled=true;document.tF.dns2_4.disabled=true;}}
+function init(){var f=document.tF;if(0==1){f.auto_from_isp.checked=false;f.auto_from_isp.disabled=true;}
+checkSecDNS();if((f.dns1_1.value==0)&&(f.dns1_2.value==0)&&(f.dns1_3.value==0)&&(f.dns1_4.value==0))
+{f.dns1_1.value="";f.dns1_2.value="";f.dns1_3.value="";f.dns1_4.value="";}
+if((f.dns2_1.value==0)&&(f.dns2_2.value==0)&&(f.dns2_3.value==0)&&(f.dns2_4.value==0))
+{f.dns2_1.value="";f.dns2_2.value="";f.dns2_3.value="";f.dns2_4.value="";}
+ShowNavMenu();}</script>

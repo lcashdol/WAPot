@@ -1,0 +1,29 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"lang="en"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"lang="en"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en"class="gt-ie8"><!--<![endif]--><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml"xmlns:v><![endif]--><head> <meta charset="utf-8"/><meta name="viewport"content="width=device-width"/> <title>Welcome to your Belkin router dashboard! </title><link rel="icon"href="/images/favicon.ico"><link rel="apple-touch-icon-precomposed"sizes="144x144"href="/images/belkin_144.png"><link rel="apple-touch-icon-precomposed"sizes="114x114"href="/images/belkin_114.png"><link rel="apple-touch-icon-precomposed"sizes="72x72"href="/images/belkin_72.png"><link rel="apple-touch-icon-precomposed"href="/images/belkin_57.png"> <link rel="stylesheet"href="/app.css"> <!--[if lt IE 9]> <link rel="stylesheet"href="/ie.css"> <![endif]--><!--[if IE]><?import namespace="v"implementation="#default#VML"?><![endif]--><script src="jquery.min.js"></script><script src="app.js"></script></head><script>var access_from=3;var PWS_ssid = "belkin.4b7";
+var PWS_key = "2ae886ec";
+var PWS_type = 4;
+var PWS_encrType = 2;
+var wps_version = 32;
+var ClientIP="192.168.2.3"
+var show_key=PWS_key.replace(/(?!^)./g,'&bull;');var ap_mode=0;var G_ip=G_svrip="192.168.2.1"
+var wf_key=PWS_key+"";</script><script src="menu.js"></script><script src="global.js"></script><script src="main_header.js"></script><script src="routine.js"></script><div class="main container"> <div class="row"><div class="eight columns"><form class="nice"name="tF0"method="post"action="/cgi-bin/setup_wan_dhcp_mac.exe"target="OUTfrm"> <input type="hidden"name="restart_time"value="0"> <input type="hidden"name="reload"value="1"><div class="row"> <div class="twelve columns"><br><br><p class="drop-ip"><label class="has-more"><b><span>WAN MAC Address</span></b> </label> <input type=text name=MACaddr1 size=3 maxlength=2 Value=EC>-
+<input type=text name=MACaddr2 size=3 maxlength=2 Value=1A>-
+<input type=text name=MACaddr3 size=3 maxlength=2 Value=59>-
+<input type=text name=MACaddr4 size=3 maxlength=2 Value=BA>-
+<input type=text name=MACaddr5 size=3 maxlength=2 Value=84>-
+<input type=text name=MACaddr6 size=3 maxlength=2 Value=B8>
+ </p><p class="drop-ip"><label class="has-more"><b><span>Clone Computer's MAC Address</span></b> </label> <a href="#clone"class="nice radius small white button"onClick="return copyto()"id="clone_wanmac">Clone</a> </p></div></div><br><a href="#save"class="nice radius large green button"onClick="return evaltF()"id="btnapply">Save</a>&nbsp;&nbsp;</form></div><div class="sidebar four columns"> <div><h6>What is the MAC address? </h6> <p><span>Each device on your network has a unique hardware address (MAC address) that identifies it to other devices on the network and the Internet.  A few Internet service providers (ISP) require that you put the MAC address from your network card or older router into the router settings. If you're not sure, enter the MAC address of the computer that was originally connected to the modem before installing the router. </span> <span class="nub"></span> </p> </div> </div><div class="column-row hide-on-desktops"> <div class="sixteen columns"> <ul class="sub-nav"id="mob_sub_nav"></ul> </div> </div></div> </div><script src="main_footer.js"></script><script>var ipm="Invalid MAC address.";var ipmnull="Invalid MAC address, it is a null address.";var mcastaddr="Invalid MAC address, it is a multicast address. ";function evaltF()
+{if(!(isBlank(document.tF0.MACaddr1.value))||!(isBlank(document.tF0.MACaddr2.value))||!(isBlank(document.tF0.MACaddr3.value))||!(isBlank(document.tF0.MACaddr4.value))||!(isBlank(document.tF0.MACaddr5.value))||!(isBlank(document.tF0.MACaddr6.value))){if(isNValid(document.tF0.MACaddr1.value)||isNValid(document.tF0.MACaddr2.value)||isNValid(document.tF0.MACaddr3.value)||isNValid(document.tF0.MACaddr4.value)||isNValid(document.tF0.MACaddr5.value)||isNValid(document.tF0.MACaddr6.value))
+{alert(ipm);return false;}
+if(document.tF0.MACaddr1.value.toUpperCase()=="FF"&&document.tF0.MACaddr2.value.toUpperCase()=="FF"&&document.tF0.MACaddr3.value.toUpperCase()=="FF"&&document.tF0.MACaddr4.value.toUpperCase()=="FF"&&document.tF0.MACaddr5.value.toUpperCase()=="FF"&&document.tF0.MACaddr6.value.toUpperCase()=="FF"){alert(ipm);return false;}
+if(document.tF0.MACaddr1.value.toUpperCase()=="00"&&document.tF0.MACaddr2.value.toUpperCase()=="00"&&document.tF0.MACaddr3.value.toUpperCase()=="00"&&document.tF0.MACaddr4.value.toUpperCase()=="00"&&document.tF0.MACaddr5.value.toUpperCase()=="00"&&document.tF0.MACaddr6.value.toUpperCase()=="00"){alert(ipm);return false;}
+if((document.tF0.MACaddr1.value&0x01)==1)
+{alert(mcastaddr);return false;}}else{alert(ipmnull);return false;}
+return subForm(document.tF0,cPage,'SYS_BOOT',REBOOT_WAIT);}var x=new Array(
+"AC",
+"D1",
+"B8",
+"DE",
+"AD",
+"AB"
+);function copyto(){document.tF0.MACaddr1.value=x[0];document.tF0.MACaddr2.value=x[1];document.tF0.MACaddr3.value=x[2];document.tF0.MACaddr4.value=x[3];document.tF0.MACaddr5.value=x[4];document.tF0.MACaddr6.value=x[5];}
+function init(){var f=document.tF;ShowNavMenu();if(access_from==2){document.tF0.MACaddr1.disabled=true;document.tF0.MACaddr2.disabled=true;document.tF0.MACaddr3.disabled=true;document.tF0.MACaddr4.disabled=true;document.tF0.MACaddr5.disabled=true;document.tF0.MACaddr6.disabled=true;DisableObject('clone_wanmac');DisableObject('btnapply');}}</script>

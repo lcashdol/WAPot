@@ -1,0 +1,150 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"lang="en"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"lang="en"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en"class="gt-ie8"><!--<![endif]--><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml"xmlns:v><![endif]--><head> <meta charset="utf-8"/><meta name="viewport"content="width=device-width"/> <title>Welcome to your Belkin router dashboard! </title><link rel="icon"href="/images/favicon.ico"><link rel="apple-touch-icon-precomposed"sizes="144x144"href="/images/belkin_144.png"><link rel="apple-touch-icon-precomposed"sizes="114x114"href="/images/belkin_114.png"><link rel="apple-touch-icon-precomposed"sizes="72x72"href="/images/belkin_72.png"><link rel="apple-touch-icon-precomposed"href="/images/belkin_57.png"> <link rel="stylesheet"href="/app.css"> <!--[if lt IE 9]> <link rel="stylesheet"href="/ie.css"> <![endif]--><!--[if IE]><?import namespace="v"implementation="#default#VML"?><![endif]--><script src="jquery.min.js"></script><script src="app.js"></script></head><script>var access_from=3;var PWS_ssid = "belkin.4b7";
+var PWS_key = "2ae886ec";
+var PWS_type = 4;
+var PWS_encrType = 2;
+var wps_version = 32;
+var ClientIP="192.168.2.3"
+var show_key=PWS_key.replace(/(?!^)./g,'&bull;');var ap_mode=0;var G_ip=G_svrip="192.168.2.1"
+var wf_key=PWS_key+"";</script><script src="menu.js"></script><script src="global.js"></script><script src="main_header.js"></script><script src="routine.js"></script><div class="main container"> <div class="row"><div class="eight columns"><form class="nice"name="tF"method="post"action="/cgi-bin/setup_lan.exe"target="OUTfrm"><div class="row"> <div class="twelve columns"><br><br><p class="drop-ip"><label class="has-more"><b><font tid="371">LAN IP Address</font></b> <span class="more"><span class="desc"tid="909">The "IP address" is the Internal IP address of the Router. To access the advanced setup interface, type this IP address into the address bar of your browser. This address can be changed if needed. To change the IP address, type in the new IP address and click "Save". The IP address you choose should be a non-routable IP. Examples of a non-routable IP are: 192.168.2.1, 10.0.0.1, 172.16.0.1. </span></span></label> <span><input class="input-text xsmall"maxLength="3"name="lan_ip1"size="3"onBlur="return Blur(0)"onFocus="Focus()"value="192">. <input class="input-text xsmall"maxLength="3"name="lan_ip2"size="3"onBlur="return Blur(1)"onFocus="Focus()"value="168">. <input class="input-text xsmall"maxLength="3"name="lan_ip3"size="3"onBlur="return Blur(2)"onFocus="Focus()"value="2">. <input class="input-text xsmall"maxLength="3"name="lan_ip4"size="3"value="1"> </span> </p> <p class="drop-ip"> <label class="has-more"> <b><font tid="372">LAN Subnet Mask</font></b> <span class="more"><span class="desc"tid="917">	There is no need to change the subnet mask. It is possible to change the subnet mask if necessary. Only make changes to the subnet mask if you specifically have a reason to do so.	</span></span></label> <span><input class="input-text xsmall"maxLength="3"name="lan_mask1"size="3"Disabled value="255">. <input class="input-text xsmall"maxLength="3"name="lan_mask2"size="3"value="255">. <input class="input-text xsmall"maxLength="3"name="lan_mask3"size="3"value="255">. <input class="input-text xsmall"maxLength="3"name="lan_mask4"size="3"value="0"> </span> </p> <p> <label class="has-more"><b><font tid="373">DHCP Server </font></b> <span class="more"><span class="desc"tid="929">The DHCP server function makes setting up a network very easy by assigning IP addresses to each computer on the network. The DHCP Server can be turned off if necessary. Turning off the DHCP server will require you to manually set a Static IP address in each computer on your network. The IP pool is the range of IP addresses set aside for dynamic assignment to the computers on your network. The default is 2-100 (99 computers) if you want to change this number, you can by entering a new starting and ending IP address and clicking on "Save".	</span></span></label> <input type="radio"value="1"name="dhcp_enable"onClick="showhideL();"checked><font tid="374">On</font> <input type="radio"value="0"name="dhcp_enable"onClick="showhideL();"><font tid="375">Off</font></p><div id="u_DHCP"> <p class="drop-ip"> <label class="has-more"><b><font tid="379">IP Pool Starting Address</font></b></label> <input class="input-text xsmall"type="text"name="DhcpStartIP1"maxlength="3"size="3"disabled value="192">. <input class="input-text xsmall"type="text"name="DhcpStartIP2"maxlength="3"size="3"disabled value="168">. <input class="input-text xsmall"type="text"name="DhcpStartIP3"maxlength="3"size="3"disabled value="2">. <input class="input-text xsmall"type="text"name="DhcpStartIP4"maxlength="3"size="3"value="2"> </p> <p class="drop-ip"> <label class="has-more"><b><font tid="380">IP Pool Ending Address</font></b></label> <input class="input-text xsmall"type="text"name="DhcpEndIP1"maxlength="3"size="3"disabled value="192">. <input class="input-text xsmall"type="text"name="DhcpEndIP2"maxlength="3"size="3"disabled value="168">. <input class="input-text xsmall"type="text"name="DhcpEndIP3"maxlength="3"size="3"disabled value="2">. <input class="input-text xsmall"type="text"name="DhcpEndIP4"maxlength="3"size="3"value="200"> </p> <p> <label><b><font tid="381">Lease Time</font></b></label> <select class="input-text small"name="LeaseTime"> <option value="0" tid="383">Half Hour</option>
+<option value="1" tid="384">One Hour</option>
+<option value="2" tid="385">Two Hours</option>
+<option value="3" tid="386">Half Day</option>
+<option value="4" tid="387">One Day</option>
+<option value="5" tid="388">Two Days</option>
+<option value="6" tid="389">One Week</option>
+<option value="7" tid="390">Two Weeks</option>
+<option value="8" tid="382" selected>Forever</option>
+</select> </p><p> <label class="has-more"><b><font tid="392">Local Domain Name </font>&nbsp;(<font tid="393">Optional</font>)</b>&nbsp;<span class="more"><span class="desc"tid="935">You can set a local domain name (network name) for your network. There is no need to change this setting unless you have a specific advanced need to do so. You can name the network anything you want such as "MY NETWORK".	</span></span> </label> <input class="input-text small no-margin"type="text"name="domain_name"maxlength="60"value="Belkin"> </p> </div> </div></div><br><a href="#save"class="nice radius large green button"tid="49"onClick="return evaltF()"id="btnapply">Save</a>&nbsp;&nbsp;</form></div><div class="sidebar four columns"> <div><h6 tid="htLAN">What do LAN Settings control? </h6> <p><span tid="370">This page helps you set up new connections, allows you to turn on/off DHCP and allows you to set the IP address of the router on your local network. </span></p> <p><span class="nub"></span></> </div> </div><div class="column-row hide-on-desktops"> <div class="sixteen columns"> <ul class="sub-nav"id="mob_sub_nav"></ul> </div> </div></div> </div><script src="main_footer.js"></script><script>var no_bypass=0;var lan_ip=new Array(
+"192",
+"168",
+"2",
+"1"
+);var LAN_IP_ADDR=new Array(
+"192",
+"168",
+"2",
+"1"
+);
+var LAN_NETMASK=new Array(
+"255",
+"255",
+"255",
+"0"
+);
+var LAN_SUBNET=new Array(
+"192",
+"168",
+"2",
+"0"
+);
+var wan_subnet=new Array(
+"10",
+"10",
+"0",
+"0"
+);var wan_subnet_len=-2144817304
+function isValid_LAN_IP_Range(){if(document.tF.lan_ip1.value==10)return true;if(document.tF.lan_ip1.value==172&&(document.tF.lan_ip2.value>15&&document.tF.lan_ip2.value<32))
+return true;if(document.tF.lan_ip1.value==192&&document.tF.lan_ip2.value==168)return true;return false;}
+function moreinfowin(flagip){var win=window.open(flagip,'help','toolbar=0,status=0,menubar=0,scrollbars=1,resizable=1,width=530,height=400,left=150,top=150');win.focus();}
+function ipcheck(){if(document.tF.lan_ip1.value<128)
+{document.tF.lan_mask2.value=0;document.tF.lan_mask3.value=0;document.tF.lan_mask4.value=0;}
+if((document.tF.lan_ip1.value<192)&&(document.tF.lan_ip1.value>127))
+{document.tF.lan_mask2.value=255;document.tF.lan_mask3.value=0;document.tF.lan_mask4.value=0;}
+if((document.tF.lan_ip1.value<240)&&(document.tF.lan_ip1.value>191))
+{document.tF.lan_mask2.value=255;document.tF.lan_mask3.value=255;document.tF.lan_mask4.value=0;}}
+function disableDHCP13(flag)
+{document.tF.DhcpStartIP1.disabled=flag;document.tF.DhcpStartIP2.disabled=flag;document.tF.DhcpStartIP3.disabled=flag;document.tF.DhcpEndIP1.disabled=flag;document.tF.DhcpEndIP2.disabled=flag;document.tF.DhcpEndIP3.disabled=flag;}
+function disableDHCP4(flag)
+{document.tF.DhcpStartIP4.disabled=flag;document.tF.DhcpEndIP4.disabled=flag;}
+var errorlocalname='Invalid Local Domain Name'+': ~!@#$%^&*()=+{}[]|\":;\'?/<>,`';function evaltF()
+{var lanIP=document.tF.lan_ip1.value+"."+document.tF.lan_ip2.value+"."+document.tF.lan_ip3.value+"."+document.tF.lan_ip4.value;var Esubmask=document.tF.lan_mask1.value+"."+document.tF.lan_mask2.value+"."+document.tF.lan_mask3.value+"."+document.tF.lan_mask4.value;var EdhcpS=document.tF.DhcpStartIP1.value+"."+document.tF.DhcpStartIP2.value+"."+document.tF.DhcpStartIP3.value+"."+document.tF.DhcpStartIP4.value;var EdhcpE=document.tF.DhcpEndIP1.value+"."+document.tF.DhcpEndIP2.value+"."+document.tF.DhcpEndIP3.value+"."+document.tF.DhcpEndIP4.value;var lIP4=parseInt(document.tF.lan_ip4.value);var sIP4=parseInt(document.tF.DhcpStartIP4.value);var eIP4=parseInt(document.tF.DhcpEndIP4.value);if((isNValidInt(document.tF.lan_mask1.value))||(isNValidInt(document.tF.lan_mask2.value))||(isNValidInt(document.tF.lan_mask3.value))||(isNValidInt(document.tF.lan_mask4.value))){message='The Subnet mask numbers you entered are invalid.';alert(message);return false;}
+if(isNValidSubnetMask(document.tF.lan_mask1.value,document.tF.lan_mask2.value,document.tF.lan_mask3.value,document.tF.lan_mask4.value)){message='The Subnet mask numbers you entered are invalid.';alert(message);return false;}
+{if(document.tF.lan_ip1.value==192)
+{if(document.tF.lan_ip2.value==168)
+{if((document.tF.lan_ip3.value>=0)&&(document.tF.lan_ip3.value<=255))
+{if((document.tF.lan_ip4.value>=1)&&(document.tF.lan_ip4.value<=254))
+{}
+else
+{message='Invalid IP address, 192.168.y.x (where y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else
+{message='Invalid IP address, 192.168.y.x (where y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else
+{message='Invalid IP address, 192.168.y.x (where y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else if(document.tF.lan_ip1.value==172)
+{if((document.tF.lan_ip2.value>=16)&&(document.tF.lan_ip2.value<=31))
+{if((document.tF.lan_ip3.value>=0)&&(document.tF.lan_ip3.value<=255))
+{if((document.tF.lan_ip4.value>=1)&&(document.tF.lan_ip4.value<=254))
+{}
+else
+{message='Invalid IP address, 172.z.y.x (where z is anything from 16 to 31, and y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else
+{message='Invalid IP address, 172.z.y.x (where z is anything from 16 to 31, and y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else
+{message='Invalid IP address, 172.z.y.x (where z is anything from 16 to 31, and y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else if(document.tF.lan_ip1.value==10)
+{if((document.tF.lan_ip2.value>=0)&&(document.tF.lan_ip2.value<=255))
+{if((document.tF.lan_ip3.value>=0)&&(document.tF.lan_ip3.value<=255))
+{if((document.tF.lan_ip4.value>=1)&&(document.tF.lan_ip4.value<=254))
+{}
+else
+{message='Invalid IP address, 10.y.y.x (where y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else
+{message='Invalid IP address, 10.y.y.x (where y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else
+{message='Invalid IP address, 10.y.y.x (where y is anything between 0 and 255, and x is anything between 1 and 254.) ';alert(message);return false;}}
+else
+{message='Invalid IP address, the first number should be (10, 172 or 192) or last number should be between 1 and 254.';alert(message);return false;}}
+if(navigator.appName!="Netscape")
+{if(!(isBlank_Zero(document.tF.lan_ip1.value))||!(isBlank_Zero(document.tF.lan_ip2.value))||!(isBlank_Zero(document.tF.lan_ip3.value))||!(isBlank_Zero(document.tF.lan_ip4.value))){if(isNValidIP(document.tF.lan_ip1.value)||isNValidIP(document.tF.lan_ip2.value)||isNValidIP(document.tF.lan_ip3.value)||isNValidIP(document.tF.lan_ip4.value)||(parseInt(document.tF.lan_ip4.value)==parseInt(document.tF.lan_mask4.value^255)+parseInt(document.tF.lan_ip4.value&document.tF.lan_mask4.value))){message='LAN IP Address is invalid!	';alert(message);return false;}}
+if(wan_subnet_len>=24){if((document.tF.lan_ip1.value&255)==wan_subnet[0]){if((document.tF.lan_ip2.value&255)==wan_subnet[1]){if((document.tF.lan_ip3.value&255)==wan_subnet[2]){message='The Subnet mask numbers you entered are invalid.';alert(message);return false;}}}}
+if(document.tF.dhcp_enable[0].checked==true)
+{if(!(isBlank_Zero(document.tF.DhcpStartIP1.value))||!(isBlank_Zero(document.tF.DhcpStartIP2.value))||!(isBlank_Zero(document.tF.DhcpStartIP3.value))||!(isBlank_Zero(document.tF.DhcpStartIP4.value))){if(isNValidIP(document.tF.DhcpStartIP1.value)||isNValidIP(document.tF.DhcpStartIP2.value)||isNValidIP(document.tF.DhcpStartIP3.value)||isNValidLastIP(document.tF.DhcpStartIP4.value)||(parseInt(document.tF.DhcpStartIP4.value)==parseInt(document.tF.lan_mask4.value^255)+parseInt(document.tF.lan_ip4.value&document.tF.lan_mask4.value))){message='IP Pool Starting Address is invalid!	';alert(message);return false;}}
+if(!(isBlank_Zero(document.tF.DhcpEndIP1.value))||!(isBlank_Zero(document.tF.DhcpEndIP2.value))||!(isBlank_Zero(document.tF.DhcpEndIP3.value))||!(isBlank_Zero(document.tF.DhcpEndIP4.value))){if(isNValidIP(document.tF.DhcpEndIP1.value)||isNValidIP(document.tF.DhcpEndIP2.value)||isNValidIP(document.tF.DhcpEndIP3.value)||isNValidLastIP(document.tF.DhcpEndIP4.value)||(parseInt(document.tF.DhcpEndIP4.value)==parseInt(document.tF.lan_mask4.value^255)+parseInt(document.tF.lan_ip4.value&document.tF.lan_mask4.value))){message='IP Pool Ending Address is invalid!	';alert(message);return false;}}
+if((document.tF.DhcpStartIP1.value&255)!=(document.tF.lan_ip1.value&255)||((document.tF.DhcpStartIP2.value&255)!=(document.tF.lan_ip2.value&255))||((document.tF.DhcpStartIP3.value&255)!=(document.tF.lan_ip3.value&255)))
+{message='The IP pool must be in the same subnet as the gateway IP';alert(message);return false;}
+if(((document.tF.DhcpStartIP1.value&document.tF.lan_mask1.value)!=(document.tF.lan_ip1.value&document.tF.lan_mask1.value))||((document.tF.DhcpStartIP2.value&document.tF.lan_mask2.value)!=(document.tF.lan_ip2.value&document.tF.lan_mask2.value))||((document.tF.DhcpStartIP3.value&document.tF.lan_mask3.value)!=(document.tF.lan_ip3.value&document.tF.lan_mask3.value))||((document.tF.DhcpStartIP4.value&document.tF.lan_mask4.value)!=(document.tF.lan_ip4.value&document.tF.lan_mask4.value)))
+{message='The IP pool must be in the same subnet as the gateway IP';alert(message);return false;}
+if((document.tF.DhcpEndIP1.value&255)!=(document.tF.lan_ip1.value&255)||((document.tF.DhcpEndIP2.value&255)!=(document.tF.lan_ip2.value&255))||((document.tF.DhcpEndIP3.value&255)!=(document.tF.lan_ip3.value&255)))
+{message='The IP pool must be in the same subnet as the gateway IP';alert(message);return false;}
+if(((document.tF.DhcpEndIP1.value&document.tF.lan_mask1.value)!=(document.tF.lan_ip1.value&document.tF.lan_mask1.value))||((document.tF.DhcpEndIP2.value&document.tF.lan_mask2.value)!=(document.tF.lan_ip2.value&document.tF.lan_mask2.value))||((document.tF.DhcpEndIP3.value&document.tF.lan_mask3.value)!=(document.tF.lan_ip3.value&document.tF.lan_mask3.value))||((document.tF.DhcpEndIP4.value&document.tF.lan_mask4.value)!=(document.tF.lan_ip4.value&document.tF.lan_mask4.value)))
+{message='The IP pool must be in the same subnet as the gateway IP';alert(message);return false;}
+if((document.tF.DhcpEndIP4.value-document.tF.DhcpStartIP4.value)<0)
+{message='The ending IP address must be larger than the starting IP address.';alert(message);return false;}
+if((lIP4>(sIP4-1))&&(lIP4<(eIP4+1)))
+{message='The LAN IP address can not be in the DHCP address pool.';alert(message);return false;}}
+if((document.tF.lan_ip1.value!=lan_ip[0])||(document.tF.lan_ip2.value!=lan_ip[1])||(document.tF.lan_ip3.value!=lan_ip[2])||(document.tF.lan_ip4.value!=lan_ip[3]))
+{if(!confirm("Do you really wish to change the LAN IP address?"))
+{return false;}
+alert("Please change the Address entry box in the status bar of your browser manually to the new lan address.");}}
+else
+{if(!(isBlank_Zero(document.tF.lan_ip1.value))||!(isBlank_Zero(document.tF.lan_ip2.value))||!(isBlank_Zero(document.tF.lan_ip3.value))||!(isBlank_Zero(document.tF.lan_ip4.value))){if(isNValidIP(document.tF.lan_ip1.value)||isNValidIP(document.tF.lan_ip2.value)||isNValidIP(document.tF.lan_ip3.value)||isNValidIP(document.tF.lan_ip4.value)||(parseInt(document.tF.lan_ip4.value)==parseInt(document.tF.lan_mask4.value^255)+parseInt(document.tF.lan_ip4.value&document.tF.lan_mask4.value))){message='LAN IP Address is invalid!	';alert(message);return false;}}
+if(wan_subnet_len>=24){if((document.tF.lan_ip1.value&255)==wan_subnet[0]){if((document.tF.lan_ip2.value&255)==wan_subnet[1]){if((document.tF.lan_ip3.value&255)==wan_subnet[2]){message='The Subnet mask numbers you entered are invalid.';alert(message);return false;}}}}
+if(document.tF.dhcp_enable[0].checked==true)
+{if(!(isBlank_Zero(document.tF.DhcpStartIP1.value))||!(isBlank_Zero(document.tF.DhcpStartIP2.value))||!(isBlank_Zero(document.tF.DhcpStartIP3.value))||!(isBlank_Zero(document.tF.DhcpStartIP4.value))){if(isNValidIP(document.tF.DhcpStartIP1.value)||isNValidIP(document.tF.DhcpStartIP2.value)||isNValidIP(document.tF.DhcpStartIP3.value)||isNValidIP(document.tF.DhcpStartIP4.value)||(parseInt(document.tF.DhcpStartIP4.value)==parseInt(document.tF.lan_mask4.value^255)+parseInt(document.tF.lan_ip4.value&document.tF.lan_mask4.value))){message=message='IP Pool Starting Address is invalid!	';alert(message);return false;}}
+if(!(isBlank_Zero(document.tF.DhcpEndIP1.value))||!(isBlank_Zero(document.tF.DhcpEndIP2.value))||!(isBlank_Zero(document.tF.DhcpEndIP3.value))||!(isBlank_Zero(document.tF.DhcpEndIP4.value))){if(isNValidIP(document.tF.DhcpEndIP1.value)||isNValidIP(document.tF.DhcpEndIP2.value)||isNValidIP(document.tF.DhcpEndIP3.value)||isNValidIP(document.tF.DhcpEndIP4.value)||(parseInt(document.tF.DhcpEndIP4.value)==parseInt(document.tF.lan_mask4.value^255)+parseInt(document.tF.lan_ip4.value&document.tF.lan_mask4.value))){message=message='IP Pool Ending Address is invalid!	';alert(message);return false;}}
+if((document.tF.DhcpStartIP1.value&255)!=(document.tF.lan_ip1.value&255)||((document.tF.DhcpStartIP2.value&255)!=(document.tF.lan_ip2.value&255))||((document.tF.DhcpStartIP3.value&255)!=(document.tF.lan_ip3.value&255)))
+{message='The IP pool must be in the same subnet as the gateway IP';alert(message);return false;}
+if(((document.tF.DhcpStartIP1.value&document.tF.lan_mask1.value)!=(document.tF.lan_ip1.value&document.tF.lan_mask1.value))||((document.tF.DhcpStartIP2.value&document.tF.lan_mask2.value)!=(document.tF.lan_ip2.value&document.tF.lan_mask2.value))||((document.tF.DhcpStartIP3.value&document.tF.lan_mask3.value)!=(document.tF.lan_ip3.value&document.tF.lan_mask3.value))||((document.tF.DhcpStartIP4.value&document.tF.lan_mask4.value)!=(document.tF.lan_ip4.value&document.tF.lan_mask4.value)))
+{message='The IP pool must be in the same subnet as the gateway IP';alert(message);return false;}
+if((document.tF.DhcpEndIP1.value&255)!=(document.tF.lan_ip1.value&255)||((document.tF.DhcpEndIP2.value&255)!=(document.tF.lan_ip2.value&255))||((document.tF.DhcpEndIP3.value&255)!=(document.tF.lan_ip3.value&255)))
+{message='The IP pool must be in the same subnet as the gateway IP';alert(message);return false;}
+if(((document.tF.DhcpEndIP1.value&document.tF.lan_mask1.value)!=(document.tF.lan_ip1.value&document.tF.lan_mask1.value))||((document.tF.DhcpEndIP2.value&document.tF.lan_mask2.value)!=(document.tF.lan_ip2.value&document.tF.lan_mask2.value))||((document.tF.DhcpEndIP3.value&document.tF.lan_mask3.value)!=(document.tF.lan_ip3.value&document.tF.lan_mask3.value))||((document.tF.DhcpEndIP4.value&document.tF.lan_mask4.value)!=(document.tF.lan_ip4.value&document.tF.lan_mask4.value)))
+{message='The IP pool must be in the same subnet as the gateway IP';alert(message);return false;}
+if((document.tF.DhcpEndIP4.value-document.tF.DhcpStartIP4.value)<0)
+{message='The ending IP address must be larger than the starting IP address.';alert(message);return false;}
+var snIP4=parseInt(document.tF.DhcpStartIP4.value);var enIP4=parseInt(document.tF.DhcpEndIP4.value);if((lIP4>(snIP4-1))&&(lIP4<(enIP4+1)))
+{message='The LAN IP address can not be in the DHCP address pool.';alert(message);return false;}
+document.tF.LeaseTime.value=document.tF.LeaseTime.value;document.tF.DhcpStartIP1.value=document.tF.DhcpStartIP1.value;document.tF.DhcpStartIP2.value=document.tF.DhcpStartIP2.value;document.tF.DhcpStartIP3.value=document.tF.DhcpStartIP3.value;document.tF.DhcpStartIP4.value=document.tF.DhcpStartIP4.value;document.tF.DhcpEndIP1.value=document.tF.DhcpEndIP1.value;document.tF.DhcpEndIP2.value=document.tF.DhcpEndIP2.value;document.tF.DhcpEndIP3.value=document.tF.DhcpEndIP3.value;document.tF.DhcpEndIP4.value=document.tF.DhcpEndIP4.value;document.tF.domain_name.value=document.tF.domain_name.value;}
+if((document.tF.lan_ip1.value!=lan_ip[0])||(document.tF.lan_ip2.value!=lan_ip[1])||(document.tF.lan_ip3.value!=lan_ip[2])||(document.tF.lan_ip4.value!=lan_ip[3]))
+{if(!confirm("Do you really wish to change the LAN IP address?"))
+{return false;}
+alert("Please change the Address entry box in the status bar of your browser manually to the new lan address..");}}
+if(document.tF.dhcp_enable[0].checked==true)
+{var s=document.tF.domain_name.value;if((s.length!=0)&&isNLocalDomain(s)){alert("Invalid Local Domain Name");document.tF.domain_name.focus();return false;}}
+disableDHCP13(false);disableDHCP4(false);return subForm(document.tF,cPage,'SYS_BOOT',REBOOT_WAIT);}
+function showhideL(flag){var f=document.tF;if(f.dhcp_enable[0].checked){DisplayObject("u_DHCP");}else{HiddenObject("u_DHCP");}}
+function Focus(){}
+var err=0;function Blur(idx){var f=document.tF;var ip;if(err)return;for(var i=1;i<4;i++){if(idx!=i-1)continue;ip=f.elements['lan_ip'+i].value;if(''+parseInt(ip,10)!=ip){alert("The IP that you entered is invalid");err=1;setTimeout(function(){f.elements['lan_ip'+i].focus();err=0;},0);return false;}
+SetFieldValue(f.elements['DhcpStartIP'+i],ip);SetFieldValue(f.elements['DhcpEndIP'+i],ip);}
+ipcheck();return false;}
+function init(){var ob=$('[tid=929]');ob.html(ob.html().replace('99','199').replace('2-100','2-200'));showhideL();ShowNavMenu();}</script>
