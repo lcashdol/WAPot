@@ -1,0 +1,48 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"lang="en"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"lang="en"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en"class="gt-ie8"><!--<![endif]--><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml"xmlns:v><![endif]--><head> <meta charset="utf-8"/><meta name="viewport"content="width=device-width"/> <title>Welcome to your Belkin router dashboard! </title><link rel="icon"href="/images/favicon.ico"><link rel="apple-touch-icon-precomposed"sizes="144x144"href="/images/belkin_144.png"><link rel="apple-touch-icon-precomposed"sizes="114x114"href="/images/belkin_114.png"><link rel="apple-touch-icon-precomposed"sizes="72x72"href="/images/belkin_72.png"><link rel="apple-touch-icon-precomposed"href="/images/belkin_57.png"> <link rel="stylesheet"href="/app.css"> <!--[if lt IE 9]> <link rel="stylesheet"href="/ie.css"> <![endif]--><!--[if IE]><?import namespace="v"implementation="#default#VML"?><![endif]--><script src="jquery.min.js"></script><script src="app.js"></script></head><script>var access_from=2;var PWS_ssid = "belkin.4b7";
+var PWS_key = "2ae886ec";
+var PWS_type = 4;
+var PWS_encrType = 2;
+var wps_version = 32;
+var ClientIP="192.168.0.11"
+var show_key=PWS_key.replace(/(?!^)./g,'&bull;');var ap_mode=0;var G_ip=G_svrip="192.168.0.116"
+var wf_key=PWS_key+"";</script><script src="menu.js"></script><script src="global.js"></script><script src="main_header.js"></script><div class="main container"> <div class="row"><div class="eight columns"><FORM class="nice"name="tF"method="post"action="/cgi-bin/firewall_ping.exe"target="OUTfrm"><div class="row"> <div class="twelve columns"><br><br><p class="drop-ip"><label class="has-more"> <span><input type="checkbox"name="ping">&nbsp;&nbsp;<b><span>Block ICMP Ping</span></b></span> </label> </p> <script>var iDOD=0;if(iDOD==1){document.tF.ping.checked=true;}</script></div></div><br><a href="#save"onClick="return applyClick();"class="nice radius large green button"id="dnsapply">Save</a>&nbsp;&nbsp;</form></div><div class="sidebar four columns"> <div><h6><span>What does WAN ping blocking do? </span></h6> <p><span>This provides a heightened level of security to keep external Internet users from finding out your IP address. It does this by not answering pings that originate outside your network. </span></p> <span class="nub"></span></p> </div> </div><div class="column-row hide-on-desktops"> <div class="sixteen columns"> <ul class="sub-nav"id="mob_sub_nav"></ul> </div> </div></div> </div><script src="main_footer.js"></script><script>var if_number=3;
+var bWanConnected=1;
+var bWanUseModem=0;
+var wan_type=0;
+var wan_ip="192.168.0.116";
+var wan_subnet_mask="255.255.255.0";
+var wan_gateway="192.168.0.1";
+var primary_dns="192.168.0.1";
+var secondary_dns="0.0.0.0";
+var lan_gateway_ip="192.168.2.1";
+var lan_gateway_mask="255.255.255.0";
+var dhcpEnbl=1;
+var wlenbl=1;
+var enfirewall=1;
+var r_mgnt_enabled = 1
+var upnp_enable=1;
+var wireless_func=1;
+var wlenbl=1;
+var wireless_channel=0;
+var hide="0";
+var w11a_enable=0;
+var ipsec_func=0;
+var printer_func=0;
+var dhcp_client_num=3;
+var dhcp_wlanclient_num=2;
+var dhcp_start_ip="192.168.2.2";
+var dhcp_end_ip="192.168.2.200";
+var runtime_code_version="5.03.20(Dec  2 2014)";
+var boot_code_version="0.12";
+var wlan_mac_addr="EC:1A:59:BA:84:B7";
+var lan_mac_addr="EC:1A:59:BA:84:B7";
+var wan_mac_addr="EC:1A:59:BA:84:B8";
+var hardware_version="01B";
+var serial_number="12332GC2501799";
+var model_name="F9K1002v5";
+var bEncPassword=1;var eco_mode=1;
+var bInetOK=1;
+var bWanConnected=33;
+function applyClick(){var loc='scsrvcntr.cmd?action=save';return subForm(document.tF,cPage,'SYS_BOOT',5);}
+function moreinfowin(flagip){var win=window.open(flagip,'help','toolbar=0,status=0,menubar=0,scrollbars=1,resizable=1,width=530,height=400,left=150,top=150');win.focus();}
+function init(){var f=document.tF;cfg2Form(f);ShowNavMenu();}</script>
