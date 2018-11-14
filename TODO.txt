@@ -1,0 +1,5 @@
+Create other types of router to emulate.
+Double check all links work for N300 interface.
+Configuration file?
+Collect more request headers?
+Respond with HTTPd version of original N300 router.
